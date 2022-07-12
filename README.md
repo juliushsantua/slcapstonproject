@@ -1,20 +1,38 @@
-# slcapstonproject
-PG DO - DevOps Capstone Project
-
-Hangout Point.
-
 DESCRIPTION
 
-Create an automated test environment for continuous evaluation of the application.
+Create a DevOps infrastructure for an e-commerce application to run on high-availability mode.
 
 Background of the problem statement:
-An entertainment company like BookMyShow where users book their tickets have multiple users accessing their web app. Due to less infrastructure availability, they use less machines and provide the required structure. This method includes many weaknesses such as:
+A popular payment application, EasyPay where users add money to their wallet accounts, faces an issue in its payment success rate. The timeout that occurs with
+the connectivity of the database has been the reason for the issue.
+While troubleshooting, it is found that the database server has several downtime instances at irregular intervals. This situation compels the company to create their own infrastructure that runs in high-availability mode.
+Given that online shopping experiences continue to evolve as per customer expectations, the developers are driven to make their app more reliable, fast, and secure for improving the performance of the current system.
 
- Developers must wait till the complete software development for the test results.
- There is a huge possibility of bugs in the test results.
- Delivery process of the software is slow.
- The quality of software is a concern due to continuous feedback referring to things like coding or architectural issues, build failures, test conditions, and file   release uploads.
- The objective is to implement the automation of the build and release process for
-their product.
+Implementation requirements:
+
+Create the cluster (EC2 instances with load balancer and elastic IP in case of AWS)
+Automate the provisioning of an EC2 instance using Ansible or Chef Puppet
+Install Docker and Kubernetes on the cluster
+Implement the network policies at the database pod to allow ingress traffic from the front-end application pod
+Create a new user with permissions to create, list, get, update, and delete pods
+Configure application on the pod
+Take snapshot of ETCD database
+Set criteria such that if the memory of CPU goes beyond 50%, environments automatically get scaled up and configured
+The following tools must be used:
+
+EC2
+Kubernetes
+Docker
+Ansible or Chef or Puppet
+The following things to be kept in check:
+
+You need to document the steps and write the algorithms in them.
+The submission of your GitHub repository link is mandatory. In order to track your tasks, you need to share the link of the repository.
+Document the step-by-step process starting from creating test cases, then executing them, and recording the results.
+You need to submit the final specification document, which includes:
+Project and tester details
+Concepts used in the project
+Links to the GitHub repository to verify the project completion
+Your conclusion on enhancing the application and defining the USPs (Unique Selling Points)
 
 
